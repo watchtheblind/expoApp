@@ -1,4 +1,4 @@
-import { StatusBar } from "expo-status-bar";
+import {StatusBar} from 'expo-status-bar'
 import {
   StyleSheet,
   TouchableHighlight,
@@ -6,45 +6,44 @@ import {
   View,
   Image,
   Button,
-} from "react-native";
+} from 'react-native'
 export default function App() {
   return (
     <View style={styles.container}>
       <Image
-        source={require("./assets/icon.png")}
-        style={{ width: 100, height: 100 }}
+        source={require('./assets/icon.png')}
+        style={{width: 100, height: 100}}
       />
       <Text>Open up App.js !</Text>
       <Button
-        title="Pulsa aquí"
+        title='Pulsa aquí'
         onPress={() => {
-          alert("Hola Mundo");
+          alert('Hola Mundo')
         }}
       />
       <TouchableHighlight
-        underlayColor={"#f00"}
+        underlayColor={'#f00'}
         style={{
           width: 200,
           height: 200,
-          backgroundColor: "red",
+          backgroundColor: 'red',
           borderRadius: 100,
-          alignItems: "center",
-          justifyContent: "center",
+          alignItems: 'center',
+          justifyContent: 'center',
         }}
-        onPress={() => alert("Hola")}
-      >
-        <Text style={{ color: "white" }}>Touch me</Text>
+        onPress={() => alert('Hola')}>
+        <Text style={{color: 'white'}}>Touch me</Text>
       </TouchableHighlight>
-      <StatusBar style="light" />
+      <StatusBar style='light' />
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#09f",
-    alignItems: "center",
-    justifyContent: "center",
+    backgroundColor: '#09f',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
-});
+})
