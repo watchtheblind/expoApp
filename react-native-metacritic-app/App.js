@@ -1,4 +1,5 @@
 import {StatusBar} from 'expo-status-bar'
+import {useEffect} from 'react'
 import {
   StyleSheet,
   TouchableHighlight,
@@ -7,7 +8,14 @@ import {
   Image,
   Button,
 } from 'react-native'
+import {getLatestGames} from './lib/metacritic'
 export default function App() {
+  const [games, setGames] = useState([])
+  useEffect(() => {
+    getLatestGames().then((games) => {
+      setGames(games)
+    })
+  }, [])
   return (
     <View style={styles.container}>
       <Image
